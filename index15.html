@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #f9f9f9;
+    }
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    .payment-methods label {
+        font-weight: normal;
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .payment-methods input {
+        margin-right: 8px;
+    }
+    
+    button {
+        margin-top: 25px;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<body>
+    <h2>Form Thanh Toan Don Hang</h2>
+    <form>
+        <label for="fullname">Ho va ten:</label>
+        <input type="text" id="fullname" name="fullname" required />
+
+        <label for="phone">So dien thoai:</label>
+        <input type="text" id="phone" name="phone" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="city">Tinh/Thanh pho:</label>
+        <input type="text" id="city" name="city" required />
+
+        <label for="district">Quan/Huyen:</label>
+        <input type="text" id="district" name="district" required />
+
+        <label for="ward">Phuong/Xa:</label>
+        <input type="text" id="ward" name="ward" required />
+
+        <label for="address">Đia chi cu the:</label>
+        <input type="text" id="address" name="address" required />
+
+        <label>Hinh thuc thanh toan:</label>
+        <div class="payment-methods">
+            <label><input type="radio" name="payment" value="cod" required /> Thanh toan khi nhan hang</label>
+            <label><input type="radio" name="payment" value="bank_transfer" /> Chuyen khoan ngan hang</label>
+            <label><input type="radio" name="payment" value="credit_card" /> Thanh toan qua the tin dung</label>
+            <label><input type="radio" name="payment" value="e_wallet" /> Thanh toan qua vi đien tu</label>
+        </div>
+
+        <button type="submit">Thanh Toan</button>
+    </form>
+</body>
+
+</html>
